@@ -1,0 +1,122 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".Activity.Attendance">
+
+
+
+    <androidx.cardview.widget.CardView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/colorPrimary"
+            android:orientation="vertical">
+
+            <TextView
+                android:id="@+id/Month"
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:layout_margin="5dp"
+                android:textAlignment="center"
+                android:textColor="#ffffff"
+                android:textSize="15dp" />
+
+        </LinearLayout>
+
+        <com.github.sundeepk.compactcalendarview.CompactCalendarView
+            xmlns:app="http://schemas.android.com/apk/res-auto"
+            android:id="@+id/compactcalendar_view"
+            android:layout_width="fill_parent"
+            android:layout_height="250dp"
+            android:layout_marginTop="40dp"
+            android:paddingLeft="10dp"
+            android:paddingRight="10dp"
+            app:compactCalendarBackgroundColor="#ffffff"
+            app:compactCalendarMultiEventIndicatorColor="#000"
+            app:compactCalendarTargetHeight="250dp"
+            app:compactCalendarEventIndicatorStyle="no_fill_large_indicator"
+            app:compactCalendarTextColor="#000"
+            app:compactCalendarTextSize="12sp"
+          />
+
+    </androidx.cardview.widget.CardView>
+
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center_horizontal"
+        android:orientation="horizontal">
+
+        <ScrollView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:id="@+id/scescr"
+           >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <HorizontalScrollView
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+                    <RelativeLayout
+                        android:id="@+id/RelativeLayout1"
+                        android:layout_width="match_parent"
+                        android:layout_gravity="center"
+                        android:layout_height="match_parent">
+
+                        <TableLayout
+                            android:id="@+id/table_main"
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:layout_marginTop="5dp"
+                            android:layout_marginBottom="8dp"
+                            android:padding="10dp"
+                            android:gravity="center"
+                            android:layout_centerInParent="true"
+                            android:stretchColumns="*"
+                            android:layout_centerHorizontal="true" >
+                        </TableLayout>
+
+                        <TextView
+                            android:id="@+id/noDataTxt"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="No Data Found..!"
+                            android:layout_marginTop="5dp"
+                            android:layout_centerInParent="true"
+                            android:visibility="gone"/>
+
+                    </RelativeLayout>
+                </HorizontalScrollView>
+
+
+            </LinearLayout>
+
+
+        </ScrollView>
+
+
+
+    </LinearLayout>
+    <ProgressBar
+        android:id="@+id/progressBar_cyclic"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:minHeight="50dp"
+        android:minWidth="50dp"
+        android:layout_gravity="center_horizontal"
+        android:layout_centerVertical="true"
+        android:layout_centerHorizontal="true"
+        />
+</LinearLayout>

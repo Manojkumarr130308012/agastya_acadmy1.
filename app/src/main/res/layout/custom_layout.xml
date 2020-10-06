@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_gravity="center_horizontal"
+    android:gravity="center"
+    android:layout_height="match_parent">
+    <TextView
+        android:id="@+id/Chart"
+        android:layout_width="match_parent"
+        android:layout_height="35dp"
+        android:gravity="center"
+        android:text="Attendance Details"
+        android:background="@color/colorPrimary"
+        android:textColor="#ffffff"
+        android:textSize="13dp" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_gravity="center_horizontal"
+        android:gravity="center"
+        android:id="@+id/scescr"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:padding="30dp"
+            android:layout_gravity="center_horizontal"
+            android:gravity="center">
+            <HorizontalScrollView
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+                <RelativeLayout
+                    android:id="@+id/RelativeLayout1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent">
+
+                    <TableLayout
+                        android:id="@+id/table_main1"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_marginTop="5dp"
+                        android:layout_marginBottom="8dp"
+                        android:padding="10dp"
+                        android:layout_centerInParent="true"
+                        android:stretchColumns="*"
+                        android:layout_centerHorizontal="true" >
+                    </TableLayout>
+
+                    <TextView
+                        android:id="@+id/noDataTxt"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="No Data Found..!"
+                        android:layout_marginTop="5dp"
+                        android:layout_centerInParent="true"
+                        android:visibility="gone"/>
+
+                </RelativeLayout>
+            </HorizontalScrollView>
+
+
+        </LinearLayout>
+
+
+    </ScrollView>
+
+
+</LinearLayout>
